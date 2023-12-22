@@ -47,7 +47,7 @@
         tools:ignore="UnknownId" />
 
     <Button
-        android:id="@+id/btn_03"
+        android:id="@+id/btn_10"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_marginStart="50dp"
@@ -60,7 +60,7 @@
         tools:ignore="UnknownId" />
 
     <Button
-        android:id="@+id/btn_04"
+        android:id="@+id/btn_11"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_marginStart="160dp"
@@ -73,7 +73,7 @@
         tools:ignore="UnknownId" />
 
     <Button
-        android:id="@+id/btn_05"
+        android:id="@+id/btn_12"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_marginStart="270dp"
@@ -86,7 +86,7 @@
         tools:ignore="UnknownId" />
 
     <Button
-        android:id="@+id/btn_06"
+        android:id="@+id/btn_20"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_marginStart="50dp"
@@ -99,7 +99,7 @@
         tools:ignore="UnknownId" />
 
     <Button
-        android:id="@+id/btn_07"
+        android:id="@+id/btn_12"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_marginStart="160dp"
@@ -112,7 +112,7 @@
         tools:ignore="UnknownId" />
 
     <Button
-        android:id="@+id/btn_08"
+        android:id="@+id/btn_22"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_marginStart="270dp"
