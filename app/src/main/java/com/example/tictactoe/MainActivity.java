@@ -1,7 +1,9 @@
 package com.example.tictactoe;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -79,13 +81,51 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void endGame(String s) {
+       AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("More Info");
+        String msg = "This is the message body";
+        builder.setMessage(msg);
+        builder.setPositiveButton("EXIT", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+        // Exit handling
+
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+            // Cancel handling
+
+            }
+        });
+        AlertDialog dialog = builder.show();
 
     }
 
     private boolean isWinner() {
         //is there a row with three the same
+        for(int row = 0; row < 3; row++)
+        {
+            if(board[row][0].toString() == board[row][1].toString())
+               if  (board[row][0].toString() == board[row][2].toString())
+                   return true;
+        }
         //is there a column with three the same
-        // is there a diagonal line with three the same
+        for(int col = 0; col < 3; col++)
+        {
+            if(board[0][col].toString() == board[1][col].toString())
+                if  (board[0][col].toString() == board[2][col].toString())
+                    return true;
+        }
+        // is there a diagonal line with three the same left up to right down
+            if(board[0][0].toString() == board[1][1].toString())
+                if  (board[0][0].toString() == board[2][2].toString())
+                    return true;
+        // is there a diagonal line with three the same left down to right up
+        if(board[2][0].toString() == board[1][1].toString())
+            if  (board[2][0].toString() == board[0][2].toString())
+                return true;
         return false;
     }
 }
