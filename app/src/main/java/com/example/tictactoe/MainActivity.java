@@ -35,24 +35,24 @@ public class MainActivity extends AppCompatActivity {
 
     public void onButtonClick(View view) {
         if (view.getId() == R.id.btn_00)
-                handleClick(0, 0, R.id.btn_00);
-            if (view.getId() ==R.id.btn_01)
-                handleClick(0, 1, R.id.btn_01);
-            if (view.getId() ==R.id.btn_02)
-                handleClick(0, 2, R.id.btn_02);
-            if (view.getId() ==R.id.btn_10)
-                handleClick(1, 0, R.id.btn_10);
-            if (view.getId() ==R.id.btn_11)
-                handleClick(1, 1, R.id.btn_11);
-            if (view.getId() ==R.id.btn_12)
-                handleClick(1, 2, R.id.btn_12);
-            if (view.getId() ==R.id.btn_20)
-                handleClick(2, 0, R.id.btn_20);
-            if (view.getId() ==R.id.btn_21)
-                handleClick(2, 1, R.id.btn_21);
-            if (view.getId() ==R.id.btn_22)
-                handleClick(2, 2, R.id.btn_22);
-        }
+            handleClick(0, 0, R.id.btn_00);
+        if (view.getId() ==R.id.btn_01)
+            handleClick(0, 1, R.id.btn_01);
+        if (view.getId() ==R.id.btn_02)
+            handleClick(0, 2, R.id.btn_02);
+        if (view.getId() ==R.id.btn_10)
+            handleClick(1, 0, R.id.btn_10);
+        if (view.getId() ==R.id.btn_11)
+            handleClick(1, 1, R.id.btn_11);
+        if (view.getId() ==R.id.btn_12)
+            handleClick(1, 2, R.id.btn_12);
+        if (view.getId() ==R.id.btn_20)
+            handleClick(2, 0, R.id.btn_20);
+        if (view.getId() ==R.id.btn_21)
+            handleClick(2, 1, R.id.btn_21);
+        if (view.getId() ==R.id.btn_22)
+            handleClick(2, 2, R.id.btn_22);
+    }
 
     private void handleClick(int row, int col, int id) {
         if (board[row][col].equals("")) {
@@ -81,21 +81,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void endGame(String s) {
-       AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("More Info");
-        String msg = "This is the message body";
-        builder.setMessage(msg);
+        builder.setMessage(s);
         builder.setPositiveButton("EXIT", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-        // Exit handling
+                // Exit handling
 
             }
         });
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-            // Cancel handling
+                // Cancel handling
 
             }
         });
@@ -108,8 +107,8 @@ public class MainActivity extends AppCompatActivity {
         for(int row = 0; row < 3; row++)
         {
             if(board[row][0].toString() == board[row][1].toString())
-               if  (board[row][0].toString() == board[row][2].toString())
-                   return true;
+                if  (board[row][0].toString() == board[row][2].toString())
+                    return true;
         }
         //is there a column with three the same
         for(int col = 0; col < 3; col++)
@@ -119,9 +118,9 @@ public class MainActivity extends AppCompatActivity {
                     return true;
         }
         // is there a diagonal line with three the same left up to right down
-            if(board[0][0].toString() == board[1][1].toString())
-                if  (board[0][0].toString() == board[2][2].toString())
-                    return true;
+        if(board[0][0].toString() == board[1][1].toString())
+            if  (board[0][0].toString() == board[2][2].toString())
+                return true;
         // is there a diagonal line with three the same left down to right up
         if(board[2][0].toString() == board[1][1].toString())
             if  (board[2][0].toString() == board[0][2].toString())
